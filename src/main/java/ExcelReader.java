@@ -1,27 +1,16 @@
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.hssf.util.CellReference;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ExcelReader {
-    private static final String XLS_FILE = "/Users/danielcallif/Desktop/Test.xls";
-    private static final String XLSX_FILE = "/Users/danielcallif/Desktop/Test.xlsx";
-
-    public static void main(String[] args) {
-        try {
-            Workbook wb = getWorkbook(XLSX_FILE);
-            if (wb == null) return;
-            Sheet sheet = wb.getSheetAt(0);
-            System.out.println(getStrExcel(1, 3, sheet));
-        } catch (IOException e) {
-            System.out.println("Could not read input");
-            e.printStackTrace();
-        }
-    }
+    private static final String XLS_FILE = "src/main/resources/Test.xls";
+    private static final String XLSX_FILE = "src/main/resources/Test.xlsx";
 
     /**
      * @param spreadsheetFile
@@ -52,5 +41,16 @@ public class ExcelReader {
         if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) return String.valueOf(( (int)cell.getNumericCellValue()));
         if (cell.getCellType() == Cell.CELL_TYPE_BOOLEAN) return String.valueOf(cell.getBooleanCellValue());
         else return null;
+    }
+
+    public static void main(String[] args) {
+        try {
+            Workbook wb = getWorkbook(XLS_FILE);
+            if (wb == null) return;
+            Sheet sheet = wb.getSheetAt(0);
+            System.out.println(getStrExcel(0, 3, sheet));
+        } catch (IOException e) {
+            System.out.println("Could not read input");
+        }
     }
 }
