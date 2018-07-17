@@ -36,7 +36,8 @@ class ExcelReaderTest {
                     assertAll("String Cell Values",
                             () -> assertTrue(TEST.getStrExcel(0, 3, sheet).equals("123456")),
                             () -> assertTrue(TEST.getStrExcel(1, 2, sheet).equals("Luna")),
-                            () -> assertTrue(TEST.getStrExcel(1, 3, sheet).equals("true"))
+                            () -> assertTrue(TEST.getStrExcel(1, 3, sheet).equals("true")),
+                            () -> assertNull(TEST.getStrExcel(1, 200, sheet))
                     );
                 },
                 () -> {
@@ -45,7 +46,8 @@ class ExcelReaderTest {
 
                     assertAll("Int Cell Values",
                             () -> assertTrue(TEST.getIntExcel(0, 3, sheet).equals(123456)),
-                            () -> assertNull(TEST.getIntExcel(1, 2, sheet))
+                            () -> assertNull(TEST.getIntExcel(1, 2, sheet)),
+                            () -> assertNull(TEST.getIntExcel(1, 200, sheet))
                     );
                 }
         );
@@ -62,7 +64,8 @@ class ExcelReaderTest {
                     assertAll("String Cell Values",
                             () -> assertTrue(TEST.getStrExcel(0, 3, sheet).equals("123456")),
                             () -> assertTrue(TEST.getStrExcel(1, 2, sheet).equals("Luna")),
-                            () -> assertTrue(TEST.getStrExcel(1, 3, sheet).equals("true"))
+                            () -> assertTrue(TEST.getStrExcel(1, 3, sheet).equals("true")),
+                            () -> assertNull(TEST.getStrExcel(1, 200, sheet))
                     );
                 },
                 () -> {
@@ -71,7 +74,8 @@ class ExcelReaderTest {
 
                     assertAll("Int Cell Values",
                             () -> assertTrue(TEST.getIntExcel(0, 3, sheet).equals(123456)),
-                            () -> assertNull(TEST.getIntExcel(1, 2, sheet))
+                            () -> assertNull(TEST.getIntExcel(1, 2, sheet)),
+                            () -> assertNull(TEST.getIntExcel(1, 200, sheet))
                     );
                 }
         );
