@@ -17,7 +17,7 @@ public class ExcelReader {
      * @return
      * @throws IOException
      */
-    private static Workbook getWorkbook(String spreadsheetFile) throws IOException {
+    static Workbook getWorkbook(String spreadsheetFile) throws IOException {
         FileInputStream fis = new FileInputStream(spreadsheetFile);
         if (spreadsheetFile.endsWith(".xls")) {
             return new HSSFWorkbook(fis);
@@ -33,7 +33,7 @@ public class ExcelReader {
      * @param sheet
      * @return
      */
-    private static String getStrExcel(int rowNum, int colmnNum, Sheet sheet) {
+    static String getStrExcel(int rowNum, int colmnNum, Sheet sheet) {
         Row row = sheet.getRow(rowNum);
         Cell cell = row.getCell(colmnNum);
         if (cell == null) return null;
