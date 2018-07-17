@@ -20,8 +20,7 @@ public class ExcelReader {
             return new HSSFWorkbook(fis);
         } else if (spreadsheetFile.endsWith(".xlsx")) {
             return new XSSFWorkbook(fis);
-        }
-        else return null;
+        } else return null;
     }
 
     /**
@@ -35,8 +34,29 @@ public class ExcelReader {
         Cell cell = row.getCell(colmnNum);
         if (cell == null) return null;
         if (cell.getCellType() == Cell.CELL_TYPE_STRING) return cell.getStringCellValue();
-        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) return String.valueOf(( (int)cell.getNumericCellValue()));
+        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) return String.valueOf(((int) cell.getNumericCellValue()));
         if (cell.getCellType() == Cell.CELL_TYPE_BOOLEAN) return String.valueOf(cell.getBooleanCellValue());
+        else return null;
+    }
+
+    /**
+     * @param rowNum
+     * @param colmnNum
+     * @param sheet
+     * @return
+     */
+    static Integer getIntExcel(int rowNum, int colmnNum, Sheet sheet) {
+        Row row = sheet.getRow(rowNum);
+        Cell cell = row.getCell(colmnNum);
+        if (cell == null) return null;
+        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) return (int) cell.getNumericCellValue();
+        if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
+            try {
+                return Integer.parseInt(cell.getStringCellValue());
+            } catch (Exception e) {
+                return null;
+            }
+        }
         else return null;
     }
 
