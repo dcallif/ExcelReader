@@ -49,6 +49,17 @@ class ExcelReaderTest {
                             () -> assertNull(TEST.getIntExcel(1, 2, sheet)),
                             () -> assertNull(TEST.getIntExcel(1, 200, sheet))
                     );
+                },
+                () -> {
+                    Sheet sheet = WB.getSheetAt(0);
+                    assertNotNull(sheet);
+
+                    assertAll("Boolean Cell Values",
+                            () -> assertTrue(TEST.getBoolExcel(1, 3, sheet)),
+                            () -> assertFalse(TEST.getBoolExcel(1, 2, sheet)),
+                            () -> assertFalse(TEST.getBoolExcel(1, 4, sheet)),
+                            () -> assertNull(TEST.getBoolExcel(1, 200, sheet))
+                    );
                 }
         );
     }
@@ -76,6 +87,17 @@ class ExcelReaderTest {
                             () -> assertTrue(TEST.getIntExcel(0, 3, sheet).equals(123456)),
                             () -> assertNull(TEST.getIntExcel(1, 2, sheet)),
                             () -> assertNull(TEST.getIntExcel(1, 200, sheet))
+                    );
+                },
+                () -> {
+                    Sheet sheet = WB.getSheetAt(0);
+                    assertNotNull(sheet);
+
+                    assertAll("Boolean Cell Values",
+                            () -> assertTrue(TEST.getBoolExcel(1, 3, sheet)),
+                            () -> assertFalse(TEST.getBoolExcel(1, 2, sheet)),
+                            () -> assertFalse(TEST.getBoolExcel(1, 4, sheet)),
+                            () -> assertNull(TEST.getBoolExcel(1, 200, sheet))
                     );
                 }
         );

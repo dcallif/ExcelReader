@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bf29c5c-ff09-43ed-ad0d-f135d9ee3617" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/ExcelReader.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Test.xls" afterPath="$PROJECT_DIR$/src/main/resources/Test.xls" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Test.xlsx" afterPath="$PROJECT_DIR$/src/main/resources/Test.xlsx" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExcelReader.class" afterPath="$PROJECT_DIR$/target/classes/ExcelReader.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test.xls" afterPath="$PROJECT_DIR$/target/classes/Test.xls" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test.xlsx" afterPath="$PROJECT_DIR$/target/classes/Test.xlsx" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,10 +20,15 @@
       <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExcelReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="146">
+              <caret line="68" column="49" lean-forward="false" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
               <folding>
-                <element signature="method#getIntExcel#0;class#ExcelReader#0" expanded="false" />
+                <element signature="docComment;method#getWorkbook#0;class#ExcelReader#0" expanded="false" />
+                <element signature="method#getWorkbook#0;class#ExcelReader#0" expanded="false" />
+                <element signature="docComment;method#getStrExcel#0;class#ExcelReader#0" expanded="false" />
+                <element signature="method#getStrExcel#0;class#ExcelReader#0" expanded="false" />
+                <element signature="docComment;method#getIntExcel#0;class#ExcelReader#0" expanded="false" />
+                <element signature="docComment;method#getCellExcel#0;class#ExcelReader#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -35,8 +37,8 @@
       <file leaf-file-name="ExcelReaderTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ExcelReaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+            <state relative-caret-position="1320">
+              <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,8 +66,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/XlsTestSuite.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExcelReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" />
       </list>
     </option>
   </component>
@@ -417,9 +419,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.ExcelReaderTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ExcelReader" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ExcelReaderTest.testXls" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ExcelReaderTest.testXlsx" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ExcelReaderTest.testXlsx" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ExcelReader" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ExcelReaderTest.testXls" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.XlsTestSuite" />
       </list>
     </recent_temporary>
@@ -441,35 +443,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ExcelReaderTest - 2018.07.17 at 11h 16m 49s.xml">
+    <history-entry file="ExcelReaderTest - 2018.07.17 at 16h 49m 09s.xml">
       <configuration name="ExcelReaderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest - 2018.07.17 at 11h 17m 35s.xml">
+    <history-entry file="ExcelReaderTest - 2018.07.17 at 16h 50m 54s.xml">
       <configuration name="ExcelReaderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest - 2018.07.17 at 15h 44m 03s.xml">
-      <configuration name="ExcelReaderTest" configurationId="JUnit" />
+    <history-entry file="ExcelReaderTest_testXlsx - 2018.07.17 at 16h 44m 43s.xml">
+      <configuration name="ExcelReaderTest.testXlsx" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest_testXls - 2018.07.17 at 10h 44m 15s.xml">
-      <configuration name="ExcelReaderTest.testXls" configurationId="JUnit" />
+    <history-entry file="ExcelReaderTest_testXlsx - 2018.07.17 at 16h 45m 22s.xml">
+      <configuration name="ExcelReaderTest.testXlsx" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest_testXls - 2018.07.17 at 11h 12m 36s.xml">
-      <configuration name="ExcelReaderTest.testXls" configurationId="JUnit" />
+    <history-entry file="ExcelReaderTest_testXlsx - 2018.07.17 at 16h 46m 49s.xml">
+      <configuration name="ExcelReaderTest.testXlsx" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest_testXls - 2018.07.17 at 11h 13m 07s.xml">
-      <configuration name="ExcelReaderTest.testXls" configurationId="JUnit" />
+    <history-entry file="ExcelReaderTest_testXlsx - 2018.07.17 at 16h 47m 20s.xml">
+      <configuration name="ExcelReaderTest.testXlsx" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest_testXls - 2018.07.17 at 11h 13m 59s.xml">
-      <configuration name="ExcelReaderTest.testXls" configurationId="JUnit" />
+    <history-entry file="ExcelReaderTest_testXlsx - 2018.07.17 at 16h 47m 45s.xml">
+      <configuration name="ExcelReaderTest.testXlsx" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest_testXls - 2018.07.17 at 11h 14m 24s.xml">
-      <configuration name="ExcelReaderTest.testXls" configurationId="JUnit" />
+    <history-entry file="ExcelReaderTest_testXlsx - 2018.07.17 at 16h 47m 59s.xml">
+      <configuration name="ExcelReaderTest.testXlsx" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest_testXls - 2018.07.17 at 11h 14m 35s.xml">
-      <configuration name="ExcelReaderTest.testXls" configurationId="JUnit" />
+    <history-entry file="ExcelReaderTest_testXlsx - 2018.07.17 at 16h 48m 38s.xml">
+      <configuration name="ExcelReaderTest.testXlsx" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ExcelReaderTest_testXls - 2018.07.17 at 11h 15m 37s.xml">
-      <configuration name="ExcelReaderTest.testXls" configurationId="JUnit" />
+    <history-entry file="ExcelReaderTest_testXlsx - 2018.07.17 at 16h 50m 47s.xml">
+      <configuration name="ExcelReaderTest.testXlsx" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -549,20 +551,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/Boolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="120" column="26" lean-forward="false" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+          <folding>
+            <element signature="e#3553#3554#0" expanded="true" />
+            <element signature="e#3619#3620#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ExcelReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        <state relative-caret-position="146">
+          <caret line="68" column="49" lean-forward="false" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
           <folding>
-            <element signature="method#getIntExcel#0;class#ExcelReader#0" expanded="false" />
+            <element signature="docComment;method#getWorkbook#0;class#ExcelReader#0" expanded="false" />
+            <element signature="method#getWorkbook#0;class#ExcelReader#0" expanded="false" />
+            <element signature="docComment;method#getStrExcel#0;class#ExcelReader#0" expanded="false" />
+            <element signature="method#getStrExcel#0;class#ExcelReader#0" expanded="false" />
+            <element signature="docComment;method#getIntExcel#0;class#ExcelReader#0" expanded="false" />
+            <element signature="docComment;method#getCellExcel#0;class#ExcelReader#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ExcelReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+        <state relative-caret-position="1320">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
           <folding />
         </state>
       </provider>

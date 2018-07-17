@@ -30,9 +30,9 @@ public class ExcelReader {
      * @return String value of cell. Can be used to return double for pricing cells
      */
     static String getStrExcel(int rowNum, int colmnNum, Sheet sheet) {
-        Row row = sheet.getRow(rowNum);
-        Cell cell = row.getCell(colmnNum);
+        Cell cell = getCellExcel(rowNum, colmnNum, sheet);
         if (cell == null) return null;
+
         if (cell.getCellType() == Cell.CELL_TYPE_STRING) return cell.getStringCellValue();
         if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
             if (cell.getNumericCellValue() % 1 != 0) return String.valueOf(cell.getNumericCellValue());
@@ -49,9 +49,9 @@ public class ExcelReader {
      * @return Integer value of cell
      */
     static Integer getIntExcel(int rowNum, int colmnNum, Sheet sheet) {
-        Row row = sheet.getRow(rowNum);
-        Cell cell = row.getCell(colmnNum);
+        Cell cell = getCellExcel(rowNum, colmnNum, sheet);
         if (cell == null) return null;
+
         if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) return (int) cell.getNumericCellValue();
         if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
             try {
@@ -60,6 +60,41 @@ public class ExcelReader {
                 return null;
             }
         } else return null;
+    }
+
+    /**
+     * @param rowNum
+     * @param colmnNum
+     * @param sheet
+     * @return Boolean for cell including strings
+     */
+    static Boolean getBoolExcel(int rowNum, int colmnNum, Sheet sheet) {
+        Cell cell = getCellExcel(rowNum, colmnNum, sheet);
+        if (cell == null) return null;
+
+        if (cell.getCellType() == Cell.CELL_TYPE_STRING) {
+            try {
+                return Boolean.parseBoolean(cell.getStringCellValue());
+            } catch (Exception e) {
+                return null;
+            }
+        }
+        if (cell.getCellType() == Cell.CELL_TYPE_BOOLEAN) {
+            return cell.getBooleanCellValue();
+        } else return null;
+    }
+
+    /**
+     * @param rowNum
+     * @param colmnNum
+     * @param sheet
+     * @return Cell for rowNum+ColumnNum
+     */
+    static Cell getCellExcel(int rowNum, int colmnNum, Sheet sheet) {
+        Row row = sheet.getRow(rowNum);
+        Cell cell = row.getCell(colmnNum);
+        if (cell == null) return null;
+        else return cell;
     }
 
     public static void main(String[] args) {
