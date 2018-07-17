@@ -11,7 +11,7 @@ import java.io.IOException;
 public class ExcelReader {
     /**
      * @param spreadsheetFile
-     * @return
+     * @return new HSSFWorkbook (.xls) or new XSSFWorkbook (.xlsx)
      * @throws IOException
      */
     static Workbook getWorkbook(String spreadsheetFile) throws IOException {
@@ -27,14 +27,17 @@ public class ExcelReader {
      * @param rowNum
      * @param colmnNum
      * @param sheet
-     * @return
+     * @return String value of cell. Can be used to return double for pricing cells
      */
     static String getStrExcel(int rowNum, int colmnNum, Sheet sheet) {
         Row row = sheet.getRow(rowNum);
         Cell cell = row.getCell(colmnNum);
         if (cell == null) return null;
         if (cell.getCellType() == Cell.CELL_TYPE_STRING) return cell.getStringCellValue();
-        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) return String.valueOf(((int) cell.getNumericCellValue()));
+        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+            if (cell.getNumericCellValue() % 1 != 0) return String.valueOf(cell.getNumericCellValue());
+            else return String.valueOf(((int) cell.getNumericCellValue()));
+        }
         if (cell.getCellType() == Cell.CELL_TYPE_BOOLEAN) return String.valueOf(cell.getBooleanCellValue());
         else return null;
     }
@@ -43,7 +46,7 @@ public class ExcelReader {
      * @param rowNum
      * @param colmnNum
      * @param sheet
-     * @return
+     * @return Integer value of cell
      */
     static Integer getIntExcel(int rowNum, int colmnNum, Sheet sheet) {
         Row row = sheet.getRow(rowNum);
@@ -60,13 +63,13 @@ public class ExcelReader {
     }
 
     public static void main(String[] args) {
-        /*try {
+        try {
             Workbook wb = getWorkbook("src/main/resources/Test.xls");
             if (wb == null) return;
             Sheet sheet = wb.getSheetAt(0);
-            System.out.println(getStrExcel(0, 3, sheet));
+            System.out.println(getStrExcel(0, 4, sheet));
         } catch (IOException e) {
             System.out.println("Could not read input");
-        }*/
+        }
     }
 }
