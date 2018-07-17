@@ -9,9 +9,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class ExcelReader {
-    private static final String XLS_FILE = "src/main/resources/Test.xls";
-    private static final String XLSX_FILE = "src/main/resources/Test.xlsx";
-
     /**
      * @param spreadsheetFile
      * @return
@@ -44,13 +41,13 @@ public class ExcelReader {
     }
 
     public static void main(String[] args) {
-        try {
-            Workbook wb = getWorkbook(XLS_FILE);
+        /*try {
+            Workbook wb = getWorkbook("src/main/resources/Test.xls");
             if (wb == null) return;
             Sheet sheet = wb.getSheetAt(0);
             System.out.println(getStrExcel(0, 3, sheet));
         } catch (IOException e) {
             System.out.println("Could not read input");
-        }
+        }*/
     }
 }
