@@ -56,8 +56,7 @@ public class ExcelReader {
             } catch (Exception e) {
                 return null;
             }
-        }
-        else return null;
+        } else return null;
     }
 
     public static void main(String[] args) {

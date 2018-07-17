@@ -1,43 +1,51 @@
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ExcelReaderTest {
     private String XLS_FILE = "src/main/resources/Test.xls";
     private String XLSX_FILE = "src/main/resources/Test.xlsx";
+    private Workbook WB = null;
+    private ExcelReader TEST = null;
+
+    @BeforeEach
+    void init(TestInfo testInfo) throws IOException {
+        TEST = new ExcelReader();
+        String displayName = testInfo.getDisplayName();
+        if (displayName.equals("Test for XLS")) {
+            WB = TEST.getWorkbook(XLS_FILE);
+            assertNotNull(WB);
+        } else if (displayName.equals("Test for XLSX")) {
+            WB = TEST.getWorkbook(XLSX_FILE);
+            assertNotNull(WB);
+        }
+    }
 
     @Test
     @DisplayName("Test for XLS")
     void testXls() {
         assertAll("XLS Cell Tests",
                 () -> {
-                    ExcelReader test = new ExcelReader();
-                    Workbook wb = test.getWorkbook(XLS_FILE);
-                    assertNotNull(wb);
-
-                    Sheet sheet = wb.getSheetAt(0);
+                    Sheet sheet = WB.getSheetAt(0);
                     assertNotNull(sheet);
 
                     assertAll("String Cell Values",
-                            () -> assertTrue(test.getStrExcel(0, 3, sheet).equals("123456")),
-                            () -> assertTrue(test.getStrExcel(1, 2, sheet).equals("Luna")),
-                            () -> assertTrue(test.getStrExcel(1, 3, sheet).equals("true"))
+                            () -> assertTrue(TEST.getStrExcel(0, 3, sheet).equals("123456")),
+                            () -> assertTrue(TEST.getStrExcel(1, 2, sheet).equals("Luna")),
+                            () -> assertTrue(TEST.getStrExcel(1, 3, sheet).equals("true"))
                     );
                 },
                 () -> {
-                    ExcelReader test = new ExcelReader();
-                    Workbook wb = test.getWorkbook(XLS_FILE);
-                    assertNotNull(wb);
-
-                    Sheet sheet = wb.getSheetAt(0);
+                    Sheet sheet = WB.getSheetAt(0);
                     assertNotNull(sheet);
 
                     assertAll("Int Cell Values",
-                            () -> assertTrue(test.getIntExcel(0, 3, sheet).equals(123456)),
-                            () -> assertNull(test.getIntExcel(1, 2, sheet))
+                            () -> assertTrue(TEST.getIntExcel(0, 3, sheet).equals(123456)),
+                            () -> assertNull(TEST.getIntExcel(1, 2, sheet))
                     );
                 }
         );
@@ -48,32 +56,30 @@ class ExcelReaderTest {
     void testXlsx() {
         assertAll("XLS Cell Tests",
                 () -> {
-                    ExcelReader test = new ExcelReader();
-                    Workbook wb = test.getWorkbook(XLSX_FILE);
-                    assertNotNull(wb);
-
-                    Sheet sheet = wb.getSheetAt(0);
+                    Sheet sheet = WB.getSheetAt(0);
                     assertNotNull(sheet);
 
                     assertAll("String Cell Values",
-                            () -> assertTrue(test.getStrExcel(0, 3, sheet).equals("123456")),
-                            () -> assertTrue(test.getStrExcel(1, 2, sheet).equals("Luna")),
-                            () -> assertTrue(test.getStrExcel(1, 3, sheet).equals("true"))
+                            () -> assertTrue(TEST.getStrExcel(0, 3, sheet).equals("123456")),
+                            () -> assertTrue(TEST.getStrExcel(1, 2, sheet).equals("Luna")),
+                            () -> assertTrue(TEST.getStrExcel(1, 3, sheet).equals("true"))
                     );
                 },
                 () -> {
-                    ExcelReader test = new ExcelReader();
-                    Workbook wb = test.getWorkbook(XLSX_FILE);
-                    assertNotNull(wb);
-
-                    Sheet sheet = wb.getSheetAt(0);
+                    Sheet sheet = WB.getSheetAt(0);
                     assertNotNull(sheet);
 
                     assertAll("Int Cell Values",
-                            () -> assertTrue(test.getIntExcel(0, 3, sheet).equals(123456)),
-                            () -> assertNull(test.getIntExcel(1, 2, sheet))
+                            () -> assertTrue(TEST.getIntExcel(0, 3, sheet).equals(123456)),
+                            () -> assertNull(TEST.getIntExcel(1, 2, sheet))
                     );
                 }
         );
+    }
+
+    @AfterEach
+    void tearDown() {
+        WB = null;
+        TEST = null;
     }
 }
