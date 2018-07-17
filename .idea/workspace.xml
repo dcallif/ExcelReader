@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3bf29c5c-ff09-43ed-ad0d-f135d9ee3617" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ExcelReader.java" afterPath="$PROJECT_DIR$/src/main/java/ExcelReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Test.xls" afterPath="$PROJECT_DIR$/src/main/resources/Test.xls" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Test.xlsx" afterPath="$PROJECT_DIR$/src/main/resources/Test.xlsx" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" afterPath="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,27 +14,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExcelReader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExcelReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="68" column="49" lean-forward="false" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
+            <state relative-caret-position="391">
+              <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
               <folding>
                 <element signature="docComment;method#getWorkbook#0;class#ExcelReader#0" expanded="false" />
                 <element signature="method#getWorkbook#0;class#ExcelReader#0" expanded="false" />
                 <element signature="docComment;method#getStrExcel#0;class#ExcelReader#0" expanded="false" />
                 <element signature="method#getStrExcel#0;class#ExcelReader#0" expanded="false" />
                 <element signature="docComment;method#getIntExcel#0;class#ExcelReader#0" expanded="false" />
+                <element signature="method#getIntExcel#0;class#ExcelReader#0" expanded="false" />
                 <element signature="docComment;method#getCellExcel#0;class#ExcelReader#0" expanded="false" />
+                <element signature="method#getCellExcel#0;class#ExcelReader#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelReaderTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExcelReaderTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ExcelReaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
+            <state relative-caret-position="896">
               <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
@@ -66,8 +65,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/XlsTestSuite.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ExcelReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/ExcelReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ExcelReader.java" />
       </list>
     </option>
   </component>
@@ -486,7 +485,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27272728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27272728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -562,26 +561,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ExcelReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ExcelReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="68" column="49" lean-forward="false" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
+        <state relative-caret-position="391">
+          <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
           <folding>
             <element signature="docComment;method#getWorkbook#0;class#ExcelReader#0" expanded="false" />
             <element signature="method#getWorkbook#0;class#ExcelReader#0" expanded="false" />
             <element signature="docComment;method#getStrExcel#0;class#ExcelReader#0" expanded="false" />
             <element signature="method#getStrExcel#0;class#ExcelReader#0" expanded="false" />
             <element signature="docComment;method#getIntExcel#0;class#ExcelReader#0" expanded="false" />
+            <element signature="method#getIntExcel#0;class#ExcelReader#0" expanded="false" />
             <element signature="docComment;method#getCellExcel#0;class#ExcelReader#0" expanded="false" />
+            <element signature="method#getCellExcel#0;class#ExcelReader#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ExcelReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

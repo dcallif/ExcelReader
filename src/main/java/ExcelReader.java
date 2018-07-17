@@ -98,13 +98,13 @@ public class ExcelReader {
     }
 
     public static void main(String[] args) {
-        try {
+        /*try {
             Workbook wb = getWorkbook("src/main/resources/Test.xls");
             if (wb == null) return;
             Sheet sheet = wb.getSheetAt(0);
             System.out.println(getStrExcel(0, 4, sheet));
         } catch (IOException e) {
             System.out.println("Could not read input");
-        }
+        }*/
     }
 }
