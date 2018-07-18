@@ -27,6 +27,19 @@ public class ExcelReader {
      * @param rowNum
      * @param colmnNum
      * @param sheet
+     * @return Cell for rowNum+ColumnNum
+     */
+    static Cell getCellExcel(int rowNum, int colmnNum, Sheet sheet) {
+        Row row = sheet.getRow(rowNum);
+        Cell cell = row.getCell(colmnNum);
+        if (cell == null) return null;
+        else return cell;
+    }
+
+    /**
+     * @param rowNum
+     * @param colmnNum
+     * @param sheet
      * @return String value of cell. Can be used to return double for pricing cells
      */
     static String getStrExcel(int rowNum, int colmnNum, Sheet sheet) {
@@ -82,19 +95,6 @@ public class ExcelReader {
         if (cell.getCellType() == Cell.CELL_TYPE_BOOLEAN) {
             return cell.getBooleanCellValue();
         } else return null;
-    }
-
-    /**
-     * @param rowNum
-     * @param colmnNum
-     * @param sheet
-     * @return Cell for rowNum+ColumnNum
-     */
-    static Cell getCellExcel(int rowNum, int colmnNum, Sheet sheet) {
-        Row row = sheet.getRow(rowNum);
-        Cell cell = row.getCell(colmnNum);
-        if (cell == null) return null;
-        else return cell;
     }
 
     public static void main(String[] args) {
