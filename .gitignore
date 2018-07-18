@@ -7,9 +7,11 @@
 *.o
 *.so
 
-# .idea dir #
+# Project dirs #
 ######################
 *.idea
+target/*
+out/*
 
 # Packages #
 ############
